@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <br><div class="container">
+        <div>
+            <b>Title:</b> {{blog_post.title}}
+        </div><br>
+        <div>
+            <b>Body:</b> {{blog_post.body}}
+        </div><br>
+        <div>
+            <b>Tags:</b>
+            {% for tag in blog_post.tags %}
+                {{tag.name}} 
+            {% endfor %}
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <a type="button" class="btn btn-default" href="{{path('blog_posts_index')}}">Back</a>
+    </div>
+
+{% endblock %}
