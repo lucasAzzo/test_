@@ -106,4 +106,8 @@ class BlogPost
         $this->body = $body;
     }
 
+    public function __toString() {
+        return (string) $this->title;
+    }
+
 }

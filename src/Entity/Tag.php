@@ -32,7 +32,7 @@ class Tag
     /**
      * @ORM\ManyToOne(targetEntity="BlogPost",inversedBy="tags")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="id_blog_post", referencedColumnName="id")
      * })
      */
     private $idBlogPost;
@@ -74,7 +74,7 @@ class Tag
     }
 
     public function __toString() {
-        return $this->name;
+        return (string) $this->name;
     }
 
 
